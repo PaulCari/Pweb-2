@@ -13,4 +13,8 @@ public class Calculator{
         System.out.print("La suma es: "+(a+b));
         return 0;
     }
+    public static int sub(int a , int b){
+        System.out.println("La resta es: " + (a-b));
+        return 0;
+    }
 }
