@@ -10,6 +10,7 @@ public class Calculator{
         sumar(x,y);
         sub(x, y);
         mul(x, y);
+        mod(x, y);
 
     }
     public static int sumar(int a, int b){
@@ -24,4 +25,13 @@ public class Calculator{
         System.out.println("El producto es: " + (a*b));
         return 0;
     }
+    public static int div(int a, int b){
+        System.out.println("La división de los numeros es: " + (a/b));
+        return 0;
+    }
+    public static int mod(int a, int b){
+        System.out.println("La respuesta del modulo entre los numeros es: " + (a % b));
+        return 0;
+    }
+    
 }
