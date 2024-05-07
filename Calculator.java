@@ -8,6 +8,9 @@ public class Calculator{
         System.out.println("Numero 2: ");
         y = scan.nextInt();
         sumar(x,y);
+        sub(x, y);
+        mul(x, y);
+
     }
     public static int sumar(int a, int b){
         System.out.print("La suma es: "+(a+b));
@@ -15,6 +18,10 @@ public class Calculator{
     }
     public static int sub(int a , int b){
         System.out.println("La resta es: " + (a-b));
+        return 0;
+    }
+    public static int mul(int a, int b){
+        System.out.println("El producto es: " + (a*b));
         return 0;
     }
 }
