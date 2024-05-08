@@ -1,37 +1,51 @@
-import java.util.*;
-public class Calculator{
-    static Scanner scan = new Scanner(System.in);
-    public static void main (String [] args){
-        int x,y;
-        System.out.println("Numero 1: ");
-        x = scan.nextInt();
-        System.out.println("Numero 2: ");
-        y = scan.nextInt();
-        sumar(x,y);
-        sub(x, y);
-        mul(x, y);
-        mod(x, y);
+import java.util.Scanner;
 
+public class Calculator {
+  private static Scanner scanner = new Scanner(System.in);
+
+  public static void main(String[] args) {
+    int num1 = getNumber("Ingrese el primer número: ");
+    int num2 = getNumber("Ingrese el segundo número: ");
+
+    System.out.println("Resultados:");
+    System.out.println("Suma: " + add(num1, num2));
+    System.out.println("Resta: " + subtract(num1, num2));
+    System.out.println("Multiplicación: " + multiply(num1, num2));
+    System.out.println("División: " + divide(num1, num2)); 
+    System.out.println("Módulo: " + modulo(num1, num2)); 
+  }
+
+  private static int getNumber(String prompt) {
+    System.out.println(prompt);
+    return scanner.nextInt();
+  }
+
+  private static int add(int a, int b) {
+    return a + b;
+  }
+
+  private static int subtract(int a, int b) {
+    return a - b;
+  }
+
+  private static int multiply(int a, int b) {
+    return a * b;
+  }
+
+  private static double divide(int a, int b) {
+    if (b == 0) {
+      System.out.println("Error: No se puede dividir entre cero.");
+      return Double.NaN; 
     }
-    public static int sumar(int a, int b){
-        System.out.print("La suma es: "+(a+b));
-        return 0;
+    return (double) a / b; 
+  }
+
+  private static int modulo(int a, int b) {
+    if (b == 0) {
+      System.out.println("Error: No se puede realizar el módulo entre cero.");
+      return 0;
     }
-    public static int sub(int a , int b){
-        System.out.println("La resta es: " + (a-b));
-        return 0;
-    }
-    public static int mul(int a, int b){
-        System.out.println("El producto es: " + (a*b));
-        return 0;
-    }
-    public static int div(int a, int b){
-        System.out.println("La división de los numeros es: " + (a/b));
-        return 0;
-    }
-    public static int mod(int a, int b){
-        System.out.println("La respuesta del modulo entre los numeros es: " + (a % b));
-        return 0;
-    }
-    
+    return a % b;
+  }
 }
+
