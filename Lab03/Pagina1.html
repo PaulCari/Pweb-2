@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio</title>
+    <style>
+        #miDiv {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="aumentarTamaño()">Aumentar tamaño de Letra </button>
+    <div id="texto">Texto de prueba </div>
+    <button onclick="disminuirTamaño()">Disminuir tamaño de letra </button>
+    <button onclick="Rojo()">Cambiar al color Rojo </button>
+    <button onclick="Azul()">Cambiar al color Azul </button>
+
+
+    <script>
+        function aumentarTamaño() {
+            var div = document.getElementById('texto');
+            var estilo = window.getComputedStyle(div, null).getPropertyValue('font-size');
+            var tamañoActual = parseFloat(estilo);
+            var nuevoTamaño = tamañoActual + 10; 
+            div.style.fontSize = nuevoTamaño + 'px';
+          
+        }
+        function disminuirTamaño() {
+            var div = document.getElementById('texto');
+            var estilo = window.getComputedStyle(div,null).getPropertyValue('font-size');
+            var tamañoActual = parseFloat(estilo);
+            var nuevoTamaño = tamañoActual - 10;
+            div.style.fontSize = nuevoTamaño + 'px';
+         
+        }
+        function Rojo() {
+            var texto = document.getElementById('texto');
+            texto.style.color ='red';
+        }
+        function Azul(){
+            var texto = document.getElementById('texto');
+            texto.style.color = 'blue';
+        }
+        
+    </script>
+</body>
+</html>
+
+
