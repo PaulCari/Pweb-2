@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio</title>
+</head>
+<body>
+    <input type="text" id = "url">
+    <button onclick="quitarGuiones()">Quitar Guiones </button>
+    <p id = "sinGuiones"></p>
+
+    <script>
+        function quitarGuiones() {
+            var nueva = "";
+            var url = document.getElementById('url').value;
+            for (let i = 0; i < url.length; i++) {
+               var letra = url.substring(i,i+1);
+               if (letra != '-') {
+                  nueva = nueva + letra;
+               }
+               document.getElementById('sinGuiones').textContent = nueva;
+            
+            }
+
+          
+        }
+        
+        
+    </script>
+</body>
+</html>
